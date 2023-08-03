@@ -11,7 +11,6 @@ public class TankGame extends JFrame {
     public static final int LEFT_BORDER = 0;
     public static final int DOWN_BORDER = 1000;
     public static final int UP_BORDER = 0;
-
     private MapPanel mp;
 
     public TankGame() {
