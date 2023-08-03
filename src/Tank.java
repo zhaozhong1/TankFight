@@ -12,6 +12,7 @@ public abstract class Tank {
     private int x;
     private int y;
     private int direct;
+    private boolean isLive = true;
 
     Vector<Shot> shotVector = new Vector<>();
     Shot shot = null;
@@ -45,6 +46,25 @@ public abstract class Tank {
         this.type = size;
     }
 
+    public HitBox getHitBox(){
+        switch (direct){
+            case 0,1://down
+                return new HitBox(x+10,y+5,x+30,y+35);
+            case 2,3://left
+                return new HitBox(x+5,y+10,x+35,y+30);
+            default:
+                return null;
+        }
+    }
+    public void shotted(){
+        if(HP>0)decreaseHP();
+        if(HP == 0)dead();
+    }
+    public void dead(){
+        if(HP == 0){
+            isLive = false;
+        }
+    }
     public int getX() {
         return x;
     }
@@ -73,6 +93,14 @@ public abstract class Tank {
         return type;
     }
 
+    public boolean isLive() {
+        return isLive;
+    }
+
+    public void setLive(boolean live) {
+        isLive = live;
+    }
+
     public void setType(int type) {
         this.type = type;
     }
@@ -94,32 +122,29 @@ public abstract class Tank {
     public void decreaseY(){
         y-=speed;
     }
+
     public void increaseY(){
         y+=speed;
     }
 
-    public void shotTank(){
-        switch (getDirect()){
-            case 0://up
-                shot = new Shot(getX()+15,getY()-35,getDirect());
-                System.out.println("UP now x= "+x+" y= "+y);
-                break;
-            case 1://down
-                shot = new Shot(getX()+15,getY()+55,getDirect());
-                System.out.println("DOWN now x= "+x+" y= "+y);
-                break;
-            case 2://left
-                shot = new Shot(getX()-55,getY()+15,getDirect());
-                System.out.println("LEFT now x= "+x+" y= "+y);
-                break;
-            case 3://right
-                shot = new Shot(getX()+55,getY()+15,getDirect());
-                System.out.println("RIGHT now x= "+x+" y= "+y);
-                break;
+    public boolean shotTank() throws InterruptedException {
+        switch (getDirect()) {
+            case 0 ->//up
+                    shot = new Shot(getX() + 15, getY() - 35, getDirect());
+            case 1 ->//down
+                    shot = new Shot(getX() + 15, getY() + 55, getDirect());
+            case 2 ->//left
+                    shot = new Shot(getX() - 55, getY() + 15, getDirect());
+            case 3 ->//right
+                    shot = new Shot(getX() + 55, getY() + 15, getDirect());
         }
         shotVector.add(shot);
         new Thread(shot).start();
         if(!shot.isLive&&!shot.isFirst)shotVector.remove(shot);
+        return true;
+    }
+    public void decreaseHP(){
+        HP--;
     }
 
 }

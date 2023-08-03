@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d8da59d2-d90e-4732-95b3-76862b0bfd55" name="更改" comment="基于java的坦克大战小游戏">
       <change afterPath="$PROJECT_DIR$/src/BallMove.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CooldownTimer.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/GraphicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HitBox.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Image/test.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TankVector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EnemyTank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EnemyTank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tank.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TankGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TankGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +81,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CooldownTimer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CooldownTimer" />
+      <module name="TankFight" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GraphicTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GraphicTest" />
       <module name="TankFight" />
@@ -92,6 +105,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.TankGame" />
+        <item itemvalue="应用程序.CooldownTimer" />
         <item itemvalue="应用程序.BallMove" />
         <item itemvalue="应用程序.GraphicTest" />
       </list>
@@ -109,7 +123,7 @@
       <workItem from="1690803560372" duration="3014000" />
       <workItem from="1690851677127" duration="15705000" />
       <workItem from="1690975201310" duration="1226000" />
-      <workItem from="1691025932568" duration="12408000" />
+      <workItem from="1691025932568" duration="24756000" />
     </task>
     <task id="LOCAL-00001" summary="基于java的坦克大战小游戏">
       <option name="closed" value="true" />
@@ -119,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691047298776</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="基于java的坦克大战小游戏">
+      <option name="closed" value="true" />
+      <created>1691048819249</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1691048819249</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +158,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="HEAD" />
                       </list>
                     </value>
                   </entry>
